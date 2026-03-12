@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide Emergent platform injected badge */
+#emergent-badge,
+.emergent-badge,
+[data-emergent],
+[id*="emergent"],
+[class*="emergent"],
+a[href*="emergent"] {
+  display: none !important;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@500;600;700;800&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: "JetBrains Mono", monospace;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 4%;
+        --foreground: 0 0% 93%;
+        --card: 0 0% 7%;
+        --card-foreground: 0 0% 93%;
+        --popover: 0 0% 7%;
+        --popover-foreground: 0 0% 93%;
+        --primary: 184 100% 50%;
+        --primary-foreground: 0 0% 4%;
+        --secondary: 343 100% 59%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 0 0% 10%;
+        --muted-foreground: 240 5% 65%;
+        --accent: 266 100% 50%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 343 100% 59%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 15%;
+        --input: 0 0% 15%;
+        --ring: 184 100% 50%;
+        --chart-1: 184 100% 50%;
+        --chart-2: 343 100% 59%;
+        --chart-3: 266 100% 50%;
+        --chart-4: 206 98% 46%;
+        --chart-5: 40 96% 56%;
+        --radius: 0.65rem;
+        --electric-cyan: #00f0ff;
+        --signal-low: #2d2d2d;
+        --signal-high: #00f0ff;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+        box-sizing: border-box;
+    }
+
+    body {
+        @apply bg-background text-foreground antialiased;
+        overflow-x: hidden;
+        min-height: 100vh;
+        background-color: hsl(var(--background));
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Outfit", sans-serif;
+        letter-spacing: -0.02em;
+    }
+
+    .font-mono {
+        font-family: "JetBrains Mono", monospace;
+    }
+}
